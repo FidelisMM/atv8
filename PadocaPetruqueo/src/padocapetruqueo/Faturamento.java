@@ -6,25 +6,29 @@ package padocapetruqueo;
 public class Faturamento {
 
     public static void main(String[] args) {
-        Produto produto1 = new Produto(1, "Pão", 0.90, 5);
-        Produto produto2 = new Produto(2, "Suco em Lata", 4.90, 2);
-        Produto produto3 = new Produto(3, "Refrigerante", 5.90, 1);
-        Produto produto4 = new Produto(4, "Pão de queijo", 3.90, 4);
-        Produto produto5 = new Produto(5, "Cigarro", 5.90, 2);
-        Produto produto6 = new Produto(6, "Bala", 0.10, 18);
+        double faturamento_total;
 
-        produto1.calcularTotal();
-        produto2.calcularTotal();
-        produto3.calcularTotal();
-        produto4.calcularTotal();
-        produto5.calcularTotal();
-        produto6.calcularTotal();
+        Produto p1 = new Produto(1, "Pão", 0.90, 5);
+        Produto p2 = new Produto(2, "Suco em Lata", 4.90, 2);
+        Produto p3 = new Produto(3, "Refrigerante", 5.90, 1);
+        Produto p4 = new Produto(4, "Pão de queijo", 3.90, 4);
+        Produto p5 = new Produto(5, "Cigarro", 5.90, 2);
 
-        produto1.imprimir();
-        produto2.imprimir();
-        produto3.imprimir();
-        produto4.imprimir();
-        produto5.imprimir();
-        produto6.imprimir();
+        p1.calcularTotal();
+        p2.calcularTotal();
+        p3.calcularTotal();
+        p4.calcularTotal();
+        p5.calcularTotal();
+
+        p1.imprimir();
+        p2.imprimir();
+        p3.imprimir();
+        p4.imprimir();
+        p5.imprimir();
+
+        faturamento_total = p1.getTotal_vendas() + p2.getTotal_vendas()
+                + p3.getTotal_vendas() + p4.getTotal_vendas() + p5.getTotal_vendas();
+
+        System.out.printf("Total do pedido: R$ %5.2f%n", faturamento_total);
     }
 }

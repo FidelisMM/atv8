@@ -47,6 +47,10 @@ public class Produto {
         return qtd_vendida;
     }
 
+    public double getTotal_vendas() {
+        return total_vendas;
+    }
+
     public void calcularTotal() {
         total_vendas = qtd_vendida * valor_unit;
     }
@@ -55,7 +59,8 @@ public class Produto {
         System.out.println("Código do produto: " + codigo);
         System.out.println("Descrição: " + descricao);
         System.out.println();
-        System.out.println("Total da venda: " + qtd_vendida + " X " + valor_unit + " = R$ " + total_vendas);
+        System.out.println("Total: " + qtd_vendida + " X " + valor_unit + " = R$ " + total_vendas);
         System.out.println("-=-=-=-=-=-=-=-");
+        System.out.println();
     }
 }
